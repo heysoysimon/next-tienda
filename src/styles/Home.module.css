@@ -4,7 +4,7 @@
 
 .banner {
   background-color: rgb(186, 165, 165);
-  background-image: url(../public/img/portada.jpg);
+  background-image: url("/portada.jpg");
   background-size: cover;
   height: 500px;
 
@@ -22,13 +22,13 @@
   height: 500px;
 }
 
-.link{
+.link {
   padding: 10px;
   margin-top: 20px;
   font-size: 20px;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
-.link:hover{
+.link:hover {
   transition: ease-in-out 300ms;
   border: 1px solid #fafafa;
 }
@@ -140,71 +140,64 @@
 
 /* galeria */
 
-.galeria{
-  display: grid; 
+.galeria {
+  display: grid;
 
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  
+
   margin: 20px 0px;
   gap: 0px;
   height: 200%;
-  
 }
- 
-.item1 {
 
-/*   background-image: url(../public/img/1.jpg);  */
-background-color: rgb(186, 165, 165);
+.item1 {
+  /*   background-image: url(../public/img/1.jpg);  */
+  background-color: rgb(186, 165, 165);
   background-size: cover;
   background-position: center;
   height: 996px;
   grid-row-start: 1;
   grid-column-start: 1;
- margin-right: 16px;
- transition: color .3s ease-in-out;
+  margin-right: 16px;
+  transition: color 0.3s ease-in-out;
   grid-row-end: 5;
   grid-column-end: 4;
-  
 }
 .item2 {
- /*  background-image: url(../public/img/2.jpg);  */
- background-color: rgb(186, 165, 165);
+  /*  background-image: url(../public/img/2.jpg);  */
+  background-color: rgb(186, 165, 165);
   background-size: cover;
   background-position: center;
   height: 500px;
   grid-row-start: 1;
   grid-column-start: 4;
   margin-bottom: 16px;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   grid-row-end: 3;
   grid-column-end: 7;
-  
 }
 .item3 {
-
-/*   background-image: url(../public/img/3.jpg);  */
-background-color: rgb(186, 165, 165);
+  /*   background-image: url(../public/img/3.jpg);  */
+  background-color: rgb(186, 165, 165);
   background-size: cover;
   background-position: center;
   height: 500px;
   grid-row-start: 3;
   grid-column-start: 4;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   grid-row-end: 5;
   grid-column-end: 7;
-  
 }
 
 .articulo {
   background-color: rgb(186, 165, 165);
-  background-image: url(../public/img/articulo.jpg);
+  background-image: url("/articulo.jpg");
   background-size: cover;
   height: 500px;
 
   box-sizing: border-box;
 }
-
 
 @media (max-width: 600px) {
   .grid {
