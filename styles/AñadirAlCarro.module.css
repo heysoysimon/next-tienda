@@ -1,0 +1,16 @@
+.boton{
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: #3b83BD;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    color: aliceblue;
+    transition: color .3s ease-in-out;
+}
+.boton:hover{
+    background: #fff;
+    color: #000;
+}
