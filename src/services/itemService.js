@@ -1,5 +1,5 @@
 export async function getItems() {
-  const url = `${process.env.BASE_URL}/api/items`;
+  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/items`;
   const respuesta = await fetch(url);
   const items = await respuesta.json();
 
