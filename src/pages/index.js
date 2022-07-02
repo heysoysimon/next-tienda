@@ -59,7 +59,7 @@ export default function Home({ items }) {
 
 export async function getStaticProps() {
   const res = await getItems();
-  console.log(typeof res);
+
   return {
     props: {
       items: res.slice(0, 3),
