@@ -18,7 +18,7 @@ export async function getIds() {
 export async function getItemData(id) {
   const items = await getItems();
 
-  const producto = items.find((item) => converPath(item.title) === id);
+  const producto = items.find((item) => item.title === id);
 
   return {
     id: id,
