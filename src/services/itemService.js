@@ -1,12 +1,13 @@
-export async function getItems(){
-    const respuesta = await fetch('http://localhost:3000/api/items')
-    const items = await respuesta.json()
+export async function getItems() {
+  const url = `${process.env.BASE_URL}/api/items`;
+  const respuesta = await fetch(url);
+  const items = await respuesta.json();
 
-    return items
+  return items;
 }
 
-export async function getLatestItems(){
-    const items = await getItems()
+export async function getLatestItems() {
+  const items = await getItems();
 
-    return items.slice( 0, 3)
+  return items.slice(0, 3);
 }
