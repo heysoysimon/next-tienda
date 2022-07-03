@@ -1,9 +1,9 @@
 import { getItems } from "../services/itemService";
 
-export async function getIds() {
+export async function getPathsFromTitle() {
   const items = await getItems();
 
-  const ids = items.map((item) => {
+  return items.map((item) => {
     return {
       params: {
         /* aqui van los ids de los objectos */
@@ -11,17 +11,15 @@ export async function getIds() {
       },
     };
   });
-
-  return ids;
 }
 
 export async function getItemData(id) {
   const items = await getItems();
 
-  const producto = items.find((item) => item.title === id);
+  const producto = items.find((item) => converPath(item.title)=== id);
 
   return {
-    id: id,
+    id,
     data: producto,
   };
 }

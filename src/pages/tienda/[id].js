@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout";
 import Producto from "../../components/Producto";
-import { getIds, getItemData } from "../../lib/utils";
+import { getPathsFromTitle, getItemData } from "../../lib/utils";
 
 export default function ProductosPage({ productoInfo }) {
   return (
@@ -10,13 +10,22 @@ export default function ProductosPage({ productoInfo }) {
   );
 }
 
-export async function getServerSideProps({ params }) {
+
+export async function getStaticPaths() {
+  const paths = await getPathsFromTitle();
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+export async function getStaticProps({ params }) {
   const id = params.id;
-  const producto = await getItemData(id);
+  const productoInfo = await getItemData(id);
 
   return {
     props: {
-      productoInfo: producto,
+      productoInfo
     },
   };
 }

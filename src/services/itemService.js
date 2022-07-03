@@ -1,5 +1,5 @@
 export async function getItems() {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/items`;
+  const url = ("http://localhost:3000/api/items");
   const respuesta = await fetch(url);
   return respuesta.json();
 }
